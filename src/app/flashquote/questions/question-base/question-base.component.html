@@ -1,24 +1,21 @@
 <div [ngSwitch]="questionType">
   <div *ngSwitchCase="'TEXT'">
-    <app-question-input-field
-      [question]="question"
-      type="text"
-      [form]="formGroup"
-    >
+    <app-question-input-field [question]="question" type="text" [form]="formGroup">
     </app-question-input-field>
   </div>
 
   <div *ngSwitchCase="'NUMBER'">
-    <app-question-input-field
-      [question]="question"
-      type="number"
-      [form]="formGroup"
-    >
+    <app-question-input-field [question]="question" type="number" [form]="formGroup">
     </app-question-input-field>
   </div>
 
-  <!-- <div *ngSwitchCase="'MULTIPLE'">
-            <app-question-select-dialog [question]="question">
-            </app-question-select-dialog>
-        </div> -->
+  <div *ngSwitchCase="'MULTIPLE'">
+    <app-question-select [question]="question" [form]="formGroup">
+    </app-question-select>
+  </div>
+
+  <div *ngSwitchCase="'SELECT'">
+    <app-question-select [question]="question" [form]="formGroup">
+    </app-question-select>
+  </div>
 </div>

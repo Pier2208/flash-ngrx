@@ -17,6 +17,14 @@ import { QuestionInputFieldComponent } from './questions/question-input-field/qu
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
+import { QuestionSelectComponent } from './questions/question-select/question-select.component';
+import { QuestionSelectDialogComponent } from './questions/question-select-dialog/question-select-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatChipsModule} from '@angular/material/chips';
+import { SearchFilterPipe } from './pipes/filter/search-filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +32,9 @@ import { MatButtonModule } from '@angular/material/button';
     FormComponent,
     QuestionBaseComponent,
     QuestionInputFieldComponent,
+    QuestionSelectComponent,
+    QuestionSelectDialogComponent,
+    SearchFilterPipe
   ],
   imports: [
     CommonModule,
@@ -34,6 +45,10 @@ import { MatButtonModule } from '@angular/material/button';
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
+    MatIconModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatChipsModule,
     EffectsModule.forFeature([FlashquoteEffects]),
     StoreModule.forFeature(
       fromFlashquote.flashquoteFeatureKey,
