@@ -14,11 +14,17 @@ import { QuestionBaseComponent } from './questions/question-base/question-base.c
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QuestionInputFieldComponent } from './questions/question-input-field/question-input-field.component';
 
-import {MatInputModule} from '@angular/material/input'
+import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-  declarations: [HomeComponent, FormComponent, QuestionBaseComponent, QuestionInputFieldComponent],
+  declarations: [
+    HomeComponent,
+    FormComponent,
+    QuestionBaseComponent,
+    QuestionInputFieldComponent,
+  ],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -26,6 +32,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
+    MatButtonModule,
     MatInputModule,
     EffectsModule.forFeature([FlashquoteEffects]),
     StoreModule.forFeature(
@@ -38,10 +45,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 export class FlashquoteModule {
   static forRoot(): ModuleWithProviders<FlashquoteModule> {
     return {
-        ngModule: FlashquoteModule,
-        providers: [
-
-        ]
-    }
-}
+      ngModule: FlashquoteModule,
+      providers: [],
+    };
+  }
 }
