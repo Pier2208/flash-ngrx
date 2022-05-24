@@ -1,0 +1,10 @@
+<div [formGroup]="form" class="input-group">
+  <mat-form-field class="input-field" appearance="fill">
+    <mat-label>{{ question.title.LabelEn }}</mat-label>
+    <input [type]="type" matInput [formControlName]="question.id.toString()" />
+  </mat-form-field>
+
+  <mat-error *ngIf="formControl.hasError('required') && formControl.touched" class="input-error">
+    <small>{{ question.title.LabelEn }} is required</small>
+  </mat-error>
+</div>
